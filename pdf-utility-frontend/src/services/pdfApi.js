@@ -1,6 +1,18 @@
 import axios from 'axios';
 
-let rawBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5113/api';
+const isLocalhost = typeof window !== 'undefined' && (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1'
+);
+
+let rawBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+// If VITE_API_BASE_URL is not set at build time, smart fallback based on current host:
+if (!rawBaseUrl) {
+  rawBaseUrl = isLocalhost
+    ? 'http://localhost:5113/api'
+    : 'https://pdfmerger-ew64.onrender.com/api';
+}
 
 // Normalize base URL to always include '/api' if not present
 rawBaseUrl = rawBaseUrl.trim().replace(/\/$/, '');
