@@ -74,7 +74,7 @@ export const handleApiError = async (error) => {
 
     return message;
   } else if (error.request) {
-    return 'Unable to connect to backend server. Please check your backend service at ' + API_BASE_URL;
+    return 'Backend server is starting up or unreachable. If using Render free tier, please wait 15 seconds for the server to wake up and try again.';
   } else {
     return error.message || 'An unexpected error occurred.';
   }

@@ -19,24 +19,15 @@ builder.Services.AddSwaggerGen();
 // DI — scoped is fine since dfService is stateless per request
 builder.Services.AddScoped<IPdfService, PdfService>();
 
-// CORS — allow configured origins, or allow all origins if unspecified for cloud deployments
+// CORS — Bulletproof policy allowing any origin (Vercel, localhost, etc.), headers, methods, & credentials
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("DefaultPolicy", policy =>
     {
-        var origins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
-        if (origins != null && origins.Length > 0)
-        {
-            policy.WithOrigins(origins)
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        }
-        else
-        {
-            policy.AllowAnyOrigin()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        }
+        policy.SetIsOriginAllowed(_ => true)
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
@@ -48,11 +39,11 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(optio
 
 var app = builder.Build();
 
-// Custom middleware FIRST so it catches everything downstream
-app.UseMiddleware<ExceptionHandlingMiddleware>();
-
-// Enable CORS
+// Enable CORS FIRST before all other middleware and endpoints
 app.UseCors("DefaultPolicy");
+
+// Custom middleware for exception handling
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Enable Swagger in all environments (including production cloud deployments)
 app.UseSwagger();
