@@ -4,6 +4,13 @@ using PdfUtility.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Dynamically bind to PORT environment variable if set by cloud hosts (e.g. Render)
+var port = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrEmpty(port))
+{
+    builder.WebHost.UseUrls($"http://+:{port}");
+}
+
 // Controllers + Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
