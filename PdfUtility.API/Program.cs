@@ -34,13 +34,14 @@ var app = builder.Build();
 // Custom middleware FIRST so it catches everything downstream
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
-if (app.Environment.IsDevelopment())
+// Enable Swagger in all environments (including production cloud deployments)
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PDF Utility API v1");
+    c.RoutePrefix = "swagger";
+});
 
-app.UseHttpsRedirection();
 app.UseCors("DefaultPolicy");
 app.UseAuthorization();
 app.MapControllers();
