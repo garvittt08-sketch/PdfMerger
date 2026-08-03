@@ -1,0 +1,15 @@
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.AssemblyInfo.cs
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\bin\Debug\net8.0\PdfUtility.Infrastructure.deps.json
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\bin\Debug\net8.0\PdfUtility.Infrastructure.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\bin\Debug\net8.0\PdfUtility.Infrastructure.pdb
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\bin\Debug\net8.0\PdfUtility.Application.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\bin\Debug\net8.0\PdfUtility.Application.pdb
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtili.F565036E.Up2Date
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\refint\PdfUtility.Infrastructure.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\PdfUtility.Infrastructure.pdb
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Infrastructure\obj\Debug\net8.0\ref\PdfUtility.Infrastructure.dll

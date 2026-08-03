@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="PdfUtility.API/PdfUtility.API.csproj" />
+  <Project Path="PdfUtility.Application/PdfUtility.Application.csproj" />
+  <Project Path="PdfUtility.Infrastructure/PdfUtility.Infrastructure.csproj" />
+</Solution>

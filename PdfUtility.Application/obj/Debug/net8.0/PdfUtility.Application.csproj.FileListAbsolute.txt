@@ -1,0 +1,11 @@
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\PdfUtility.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\PdfUtility.Application.AssemblyInfoInputs.cache
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\PdfUtility.Application.AssemblyInfo.cs
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\PdfUtility.Application.csproj.CoreCompileInputs.cache
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\bin\Debug\net8.0\PdfUtility.Application.deps.json
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\bin\Debug\net8.0\PdfUtility.Application.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\bin\Debug\net8.0\PdfUtility.Application.pdb
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\PdfUtility.Application.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\refint\PdfUtility.Application.dll
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\PdfUtility.Application.pdb
+C:\Users\mayuram\source\repos\PdfMerger\PdfUtility.Application\obj\Debug\net8.0\ref\PdfUtility.Application.dll
