@@ -12,14 +12,24 @@ builder.Services.AddSwaggerGen();
 // DI — scoped is fine since dfService is stateless per request
 builder.Services.AddScoped<IPdfService, PdfService>();
 
-// CORS — restrict to known origins in production; wildcard only for dev
+// CORS — allow configured origins, or allow all origins if unspecified for cloud deployments
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("DefaultPolicy", policy =>
     {
-        policy.WithOrigins(builder.Configuration.GetSection("AllowedOrigins").Get<string[]>() ?? Array.Empty<string>())
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        var origins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
+        if (origins != null && origins.Length > 0)
+        {
+            policy.WithOrigins(origins)
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        }
+        else
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        }
     });
 });
 
@@ -34,6 +44,9 @@ var app = builder.Build();
 // Custom middleware FIRST so it catches everything downstream
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
+// Enable CORS
+app.UseCors("DefaultPolicy");
+
 // Enable Swagger in all environments (including production cloud deployments)
 app.UseSwagger();
 app.UseSwaggerUI(c =>
@@ -42,7 +55,6 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
-app.UseCors("DefaultPolicy");
 app.UseAuthorization();
 app.MapControllers();
 
